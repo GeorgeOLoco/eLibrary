@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="manageUsersBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminPages.ManageUsers">
+   <center>
+      <AnchorPane fx:id="manageUsers" prefHeight="350.0" prefWidth="480.0" style="-fx-background-color: #ddd1e7;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="usersTable" layoutX="11.2" layoutY="58.4" onMouseClicked="#UserSelected" prefHeight="286.0" prefWidth="458.0" style="-fx-background-color: white; -fx-border-color: indigo; -fx-border-width: 2;" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="60.0">
+               <columns>
+                  <TableColumn fx:id="username" prefWidth="75.0" text="username" />
+                  <TableColumn fx:id="name" prefWidth="75.0" text="name" />
+                  <TableColumn fx:id="surname" prefWidth="75.0" text="surname" />
+                  <TableColumn fx:id="id" prefWidth="58.39994812011719" text="ID" />
+                  <TableColumn fx:id="email" prefWidth="71.2000732421875" text="e-mail" />
+                  <TableColumn fx:id="mobile" maxWidth="103.20001220703125" minWidth="80.0" prefWidth="100.0" text="Phone Number" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button contentDisplay="RIGHT" graphicTextGap="35.0" layoutX="164.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnDeleteUserClicked" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: indigo; -fx-border-color: black; -fx-border-width: 2 2 2 2;" text="Delete User" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="165.6">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/bin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="50.0" layoutX="319.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnEditUserClicked" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: indigo; -fx-border-color: black; -fx-border-width: 2 2 2 2;" text="Edit User" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="11.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/user-avatar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="133.0" text="Users" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="353.0" prefHeight="36.0" prefWidth="129.0" text="Select a user to edit or delete." wrapText="true" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="336.4">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="75.8" layoutY="16.8" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="75.8" AnchorPane.topAnchor="16.8">
+               <image>
+                  <Image url="@../icons/manage%20user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

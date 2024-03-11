@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginLogout.StartSceneController">
+   <center>
+      <AnchorPane fx:id="topFiveBooks" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #ddd1e7; -fx-border-width: 0 0 0 3; -fx-border-color: indigo;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="91.0" layoutY="20.0" style="-fx-font-weight: bold;" text="eLibrary" AnchorPane.leftAnchor="91.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="90.0" text="Top Five Rated Books" textAlignment="CENTER" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="90.0">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="225.0" layoutY="287.0" text="Sign Up to Rent!" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="13.0">
+               <image>
+                  <Image url="@../icons/open-book.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="topFives" focusTraversable="false" layoutX="75.0" layoutY="120.0" prefHeight="155.0" prefWidth="370.0" style="-fx-background-color: white; -fx-border-color: indigo; -fx-border-width: 3;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+              <columns>
+                  <TableColumn fx:id="isbn" editable="false" minWidth="-Infinity" prefWidth="64.79998922348022" sortable="false" text="ISBN" />
+                <TableColumn fx:id="title" editable="false" minWidth="-Infinity" prefWidth="85.59996795654297" sortable="false" text="Title" />
+                <TableColumn fx:id="author" editable="false" minWidth="-Infinity" prefWidth="100.79998779296875" sortable="false" text="Author" />
+                  <TableColumn fx:id="numOfRatings" editable="false" maxWidth="66.4" minWidth="66.4" prefWidth="66.4000244140625" sortable="false" text="#Ratings" />
+                  <TableColumn fx:id="rating" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" sortable="false" text="Rating" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane fx:id="left" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #ddd1e7;" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

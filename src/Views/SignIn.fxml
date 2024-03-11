@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="SignIn" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginLogout.SignInController">
+   <children>
+      <TextField fx:id="usernameText" layoutX="37.0" layoutY="172.0" prefHeight="28.0" prefWidth="138.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: indigo; -fx-border-width: 0 0 2 0;" />
+      <PasswordField fx:id="passwordText" layoutX="37.0" layoutY="200.0" prefHeight="28.0" prefWidth="138.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: indigo; -fx-border-width: 0 0 2 0;" />
+      <Button contentDisplay="RIGHT" layoutX="64.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnSignInClicked" style="-fx-background-color: indigo; -fx-border-color: black; -fx-border-width: 2;" text="Login" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/enter.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="48.0" layoutY="92.0" text="User Login">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="24.0" layoutY="362.0" onAction="#btnSignUpClicked" text="Don't have an account yet?" AnchorPane.bottomAnchor="14.0" />
+      <ImageView fitHeight="50.0" fitWidth="80.0" layoutX="76.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/multiple-users-silhouette.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/key.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

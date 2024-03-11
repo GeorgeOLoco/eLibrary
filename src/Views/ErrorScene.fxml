@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PopUpScreens.ErrorController">
+   <children>
+      <Label fx:id="errorMessage" alignment="CENTER" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </Label>
+      <Label style="-fx-font-weight: bold;" text="ERROR" textFill="RED">
+         <StackPane.margin>
+            <Insets bottom="60.0" />
+         </StackPane.margin>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</StackPane>
